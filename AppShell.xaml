@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="NotesApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NotesApp"
+    xmlns:views="clr-namespace:NotesApp.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Notes"
+           ContentTemplate="{DataTemplate views:AllNotes}"
+            Icon="{OnPlatform 'icons_note.png', iOS='icons_note_ios.png'}" />
+
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate views:About}"
+            Icon="{OnPlatform 'icons_about.png', iOS='icons_about_ios.png'}" />
+    </TabBar>
+
+</Shell>
